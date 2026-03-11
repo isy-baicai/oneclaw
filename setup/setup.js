@@ -1,5 +1,5 @@
 // ============================================
-// OneClaw Setup — 三步向导交互逻辑
+// ClawQ Setup — 三步向导交互逻辑
 // ============================================
 
 (function () {
@@ -9,7 +9,7 @@
   const PROVIDERS = {
     anthropic: {
       placeholder: "sk-ant-...",
-      platformUrl: "https://console.anthropic.com?utm_source=oneclaw",
+      platformUrl: "https://console.anthropic.com?utm_source=ClawQ",
       models: [
         "claude-sonnet-4-6",
         "claude-opus-4-6",
@@ -25,12 +25,12 @@
     },
     openai: {
       placeholder: "sk-...",
-      platformUrl: "https://platform.openai.com?utm_source=oneclaw",
+      platformUrl: "https://platform.openai.com?utm_source=ClawQ",
       models: ["gpt-5.4", "gpt-5.2", "gpt-5.2-codex"],
     },
     google: {
       placeholder: "AI...",
-      platformUrl: "https://aistudio.google.com?utm_source=oneclaw",
+      platformUrl: "https://aistudio.google.com?utm_source=ClawQ",
       models: ["gemini-3.1-pro-preview", "gemini-3.1-flash-lite-preview", "gemini-3-flash-preview"],
     },
     custom: {
@@ -41,9 +41,9 @@
 
   // Moonshot 子平台各自的 URL
   const SUB_PLATFORM_URLS = {
-    "moonshot-cn": "https://platform.moonshot.cn?utm_source=oneclaw",
-    "moonshot-ai": "https://platform.moonshot.ai?utm_source=oneclaw",
-    "kimi-code": "https://kimi.com/code?utm_source=oneclaw",
+    "moonshot-cn": "https://platform.moonshot.cn?utm_source=ClawQ",
+    "moonshot-ai": "https://platform.moonshot.ai?utm_source=ClawQ",
+    "kimi-code": "https://kimi.com/code?utm_source=ClawQ",
   };
 
   // Kimi Code 子平台使用独立模型列表
@@ -101,9 +101,9 @@
   // ---- 国际化文案 ----
   const I18N = {
     en: {
-      title: "OneClaw Setup",
-      "welcome.title": "Welcome to OneClaw",
-      "welcome.subtitle": "OneClaw is a one-click installer for OpenClaw. Ready to use out of the box.",
+      title: "ClawQ Setup",
+      "welcome.title": "Welcome to ClawQ",
+      "welcome.subtitle": "ClawQ is a one-click installer for OpenClaw. Ready to use out of the box.",
       "welcome.feat1": "Chat with top language models like Claude, GPT, Kimi, Gemini",
       "welcome.feat2": "Follow instructions to access files on your computer and automate tasks",
       "welcome.feat3": "Connect to Feishu, WeCom, DingTalk, QQ Bot",
@@ -111,7 +111,7 @@
       "welcome.next": "Next",
       "config.title": "Configure Provider",
       "config.subtitle": "Choose your LLM provider and enter your API key.",
-      "config.keyNotice": "OneClaw does not provide API keys. Please click the link to purchase one from the provider's website.",
+      "config.keyNotice": "ClawQ does not provide API keys. Please click the link to purchase one from the provider's website.",
       "config.platform": "Platform",
       "config.baseUrl": "Base URL",
       "config.apiKey": "API Key",
@@ -132,7 +132,7 @@
       "config.verify": "Verify & Continue",
       "config.imageSupport": "Model supports image input",
       "done.title": "All Set!",
-      "done.subtitle": "OneClaw is ready. Here's what you can do:",
+      "done.subtitle": "ClawQ is ready. Here's what you can do:",
       "done.feature1": "Chat with state-of-the-art language models",
       "done.feature2": "Generate and execute code in real time",
       "done.feature3": "Manage multiple conversations and contexts",
@@ -140,11 +140,11 @@
       "done.sessionMemory": "Auto-save session memory on /new",
       "done.launchAtLogin": "Launch at login",
       "done.installCli": "Add openclaw command to terminal PATH",
-      "done.start": "Start OneClaw",
+      "done.start": "Start ClawQ",
       "done.starting": "Starting Gateway…",
-      "done.startFailed": "Gateway failed to start. Please click Start OneClaw to retry.",
+      "done.startFailed": "Gateway failed to start. Please click Start ClawQ to retry.",
       "conflict.title": "Existing OpenClaw Detected",
-      "conflict.subtitle": "An existing OpenClaw installation was found on your system. This may cause port conflicts with OneClaw.",
+      "conflict.subtitle": "An existing OpenClaw installation was found on your system. This may cause port conflicts with ClawQ.",
       "conflict.reassure": "Your personas and chat history will be preserved.",
       "conflict.portInUse": "Port {port} is in use by process: {process} (PID: {pid})",
       "conflict.globalInstalled": "Global installation found: {path}",
@@ -159,9 +159,9 @@
       "error.connection": "Connection error: ",
     },
     zh: {
-      title: "OneClaw 安装引导",
-      "welcome.title": "欢迎使用 OneClaw",
-      "welcome.subtitle": "OneClaw 是 OpenClaw 的一键安装包，开箱即用。",
+      title: "ClawQ 安装引导",
+      "welcome.title": "欢迎使用 ClawQ",
+      "welcome.subtitle": "ClawQ 是 OpenClaw 的一键安装包，开箱即用。",
       "welcome.feat1": "支持 Claude、GPT、Kimi、Gemini 等主流大语言模型",
       "welcome.feat2": "遵循指令访问电脑上的文件，自动执行各种办公任务",
       "welcome.feat3": "连接飞书、企业微信、钉钉、QQ 机器人",
@@ -169,7 +169,7 @@
       "welcome.next": "下一步",
       "config.title": "配置服务商",
       "config.subtitle": "选择 LLM 服务商并输入 API 密钥。",
-      "config.keyNotice": "OneClaw 不提供 API 密钥，请点击链接前往服务商官网购买 API 密钥后使用。",
+      "config.keyNotice": "ClawQ 不提供 API 密钥，请点击链接前往服务商官网购买 API 密钥后使用。",
       "config.platform": "平台",
       "config.baseUrl": "接口地址",
       "config.apiKey": "API 密钥",
@@ -190,7 +190,7 @@
       "config.verify": "验证并继续",
       "config.imageSupport": "模型支持图片输入",
       "done.title": "配置完成！",
-      "done.subtitle": "OneClaw 已就绪，你可以：",
+      "done.subtitle": "ClawQ 已就绪，你可以：",
       "done.feature1": "与最先进的大语言模型对话",
       "done.feature2": "实时生成并执行代码",
       "done.feature3": "管理多个对话和上下文",
@@ -198,11 +198,11 @@
       "done.sessionMemory": "开新对话时自动保存会话记忆",
       "done.launchAtLogin": "开机启动",
       "done.installCli": "将 openclaw 命令添加到终端 PATH",
-      "done.start": "启动 OneClaw",
+      "done.start": "启动 ClawQ",
       "done.starting": "正在启动 Gateway…",
-      "done.startFailed": 'Gateway 启动失败，请点击"启动 OneClaw"重试。',
+      "done.startFailed": 'Gateway 启动失败，请点击"启动 ClawQ"重试。',
       "conflict.title": "检测到已安装的 OpenClaw",
-      "conflict.subtitle": "系统中已存在 OpenClaw 安装，可能与 OneClaw 产生端口冲突。",
+      "conflict.subtitle": "系统中已存在 OpenClaw 安装，可能与 ClawQ 产生端口冲突。",
       "conflict.reassure": "你的人设和聊天记录将会被保留。",
       "conflict.portInUse": "端口 {port} 被占用，进程: {process} (PID: {pid})",
       "conflict.globalInstalled": "全局安装路径: {path}",
@@ -330,12 +330,12 @@
 
   // 检查系统中是否已有 OpenClaw 安装
   async function checkExistingInstallation() {
-    if (!window.oneclaw?.detectInstallation) {
+    if (!window.ClawQ?.detectInstallation) {
       goToStep(1);
       return;
     }
     try {
-      const res = await window.oneclaw.detectInstallation();
+      const res = await window.ClawQ.detectInstallation();
       if (!res?.success || !res.data) {
         goToStep(1);
         return;
@@ -375,7 +375,7 @@
     hideConflictError();
 
     try {
-      const res = await window.oneclaw.resolveConflict({
+      const res = await window.ClawQ.resolveConflict({
         action: "uninstall",
         pid: detectionResult?.portPid || 0,
       });
@@ -577,7 +577,7 @@
     hideError();
 
     try {
-      const result = await window.oneclaw.verifyKey(params);
+      const result = await window.ClawQ.verifyKey(params);
 
       if (!result.success) {
         showError(result.message || t("error.verifyFailed"));
@@ -585,7 +585,7 @@
         return;
       }
 
-      await window.oneclaw.saveConfig(buildSavePayload(params));
+      await window.ClawQ.saveConfig(buildSavePayload(params));
       setVerifying(false);
       goToStep(3);
     } catch (err) {
@@ -683,7 +683,7 @@
       if (launchAtLoginSupported) {
         payload.launchAtLogin = !!els.launchAtLoginEnabled.checked;
       }
-      const result = await window.oneclaw.completeSetup(payload);
+      const result = await window.ClawQ.completeSetup(payload);
       if (!result || !result.success) {
         setStarting(false);
         setDoneStatus(result?.message || t("done.startFailed"), true);
@@ -696,11 +696,11 @@
 
   // 读取系统层开机启动状态并回填 Step 3 开关。
   async function loadLaunchAtLoginState() {
-    if (!window.oneclaw?.setupGetLaunchAtLogin) {
+    if (!window.ClawQ?.setupGetLaunchAtLogin) {
       return;
     }
     try {
-      const result = await window.oneclaw.setupGetLaunchAtLogin();
+      const result = await window.ClawQ.setupGetLaunchAtLogin();
       if (!result?.success || !result.data) {
         return;
       }
@@ -799,16 +799,16 @@
     els.platformLink.addEventListener("click", (e) => {
       e.preventDefault();
       const url = els.platformLink.dataset.url;
-      if (url && window.oneclaw?.openExternal) {
-        window.oneclaw.openExternal(url);
+      if (url && window.ClawQ?.openExternal) {
+        window.ClawQ.openExternal(url);
       }
     });
 
     // 教程文档链接 → 用系统浏览器打开
     els.docsLink.addEventListener("click", (e) => {
       e.preventDefault();
-      if (window.oneclaw?.openExternal) {
-        window.oneclaw.openExternal("https://oneclaw.cn/docs");
+      if (window.ClawQ?.openExternal) {
+        window.ClawQ.openExternal("https://ClawQ.cn/docs");
       }
     });
 

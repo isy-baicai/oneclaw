@@ -1,8 +1,8 @@
 {
-  "name": "OneClaw",
+  "name": "ClawQ",
   "version": "2026.3.10",
   "private": true,
-  "description": "OneClaw desktop app — cross-platform Electron shell for openclaw",
+  "description": "ClawQ desktop app — cross-platform Electron shell for openclaw",
   "main": "dist/main.js",
   "scripts": {
     "generate:settings-icons": "node scripts/generate-settings-icons.js",
